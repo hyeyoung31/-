@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animate</title>
+</head>
+
+<body>
+  <h1>animate</h1>
+  <h2>Content Title</h2>
+  <script src="./js/jquery-3.6.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+    // 대상.animate({
+    //   css속성명:값,
+    //   css속성명:값
+    // },시간,속도,끝나면할일);
+    
+    let title = $('h2');
+    title.stop().animate({
+      fontSize: '100px'
+    }, 2000, 'easeOutBounce',function(){
+      title.animate({fontSize:'50px'});
+    });
+
+    // api jquery
+    // jqueryui.com 속도모델
+
+    /* 도서를 참조하여 옵션을 추가해보세요 */
+  </script>
+</body>
+
+</html>
