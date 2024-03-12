@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>타이머2</title>
+</head>
+
+<body>
+  <h1>SetInterval</h1>
+  <button id="stop">stop</button>
+  <button id="start">start</button>
+  <script>
+    //전역변수로
+     let interval;
+
+    function autoHi(){
+      interval = setInterval(function(){
+        alert('반갑습니다.');
+      },4000);
+    }
+    
+    autoHi();
+
+    // let interval = setInterval(function () {
+    //       alert('반갑습니다.');
+    //  }, 4000);
+     
+    //clearInterval(interval);
+
+    document.querySelector('#stop').addEventListener('click',()=>{
+      clearInterval(interval);
+    })
+
+    document.querySelector('#start').addEventListener('click',()=>{
+      autoHi();
+    })
+  </script>
+
+</body>
+
+</html>

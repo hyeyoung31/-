@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수 구조</title>
+</head>
+
+<body>
+  <h1>함수 구조</h1>
+  <!-- 1.입려,할일,출력 -->
+  <script>
+       
+    // 2.add라는 함수 이름이 있는 함수 어디에 있던 끌어올림. 호이스팅
+
+
+    //  let result = add(10, 30); 
+    //  //10, 30 전달 인자(argument)
+    // document.write(result);
+    
+    // function add(a, b) {
+    //    //a,b 매개변수(parameter)
+    //   let sum = a + b;
+    //   return sum;
+    // }
+
+    // 3. 지역변수
+  // let add = function(a,b){
+  //   let sum = a+ b; // 지역변수
+  //   return sum;
+  // }
+
+  // add(10,30);
+  // console.log(add);
+  // document.write(sum); //sum is not defined
+
+  // 4.전역변수
+  let sum;
+  let add = function(a,b){
+    sum = a + b;
+  }
+
+  add(10,30);
+  document.write(sum);
+  </script>
+
+</body>
+
+</html>
