@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration:none;
+    font-family: "맑은 고딕";
+    font-size:14px;
+    color:#333;
+    box-sizing: border-box;
+}
+
+a{
+    color: inherit;
+}
+
+/* layout */
+
+main{
+    display:flex;
+}
+
+main >*{
+    border:1px solid #ccc;
+}
+
+aside {
+    width:200px;
+}
+.content{
+    /* width:calc(100% - 200px); */
+    flex:1;
+}
+
+/* ASIDE */
+aside > *{
+    border:1px solid #ccc;
+}
+
+aside header{
+    height:100px;
+}
+
+aside nav{
+    height:400px;
+}
+
+aside .spot_menu {
+    height:50px;
+}
+
+/* slide */
+.slide_wrapper{
+    height:400px;
+    position:relative;
+}
+
+.slide_image{
+    border:1px solid blue;
+    height:400px;
+}
+
+.slide_banner{
+    position:absolute;
+    border:1px solid green;
+    width:150px;
+    height:300px;
+    top:0;
+    right:0;
+}
+
+/* shortcut */
+.shortcut{
+    border:1px solid pink;
+    height:200px;
+}
+
+.news_gallery {
+    border:1px solid green;
+    height:200px;
+}
+
+/* footer */
+footer{
+    display:flex;
+}
+
+footer > * {
+    border:1px solid #ccc;
+    height:100px;
+}
+
+.footer_logo{
+    width:200px;
+}
+
+.copyright{
+    flex:1;
+}
+
+.sns{
+    width:250px;
+}

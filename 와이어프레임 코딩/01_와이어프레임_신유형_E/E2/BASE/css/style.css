@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "맑은 고딕";
+    font-size: 14px;
+    color:#333;
+    box-sizing: border-box;
+}
+
+a{
+    color:inherit;
+}
+
+.hidden{
+    display:none;
+}
+
+/* layout */
+
+body{
+    height:100vh;
+    /* 블록요소라 안줘도 가로 너비 다쓰고 있음 */
+}
+
+main{
+    display:flex;
+    height:calc(100% - 100px);
+}
+
+main > * {
+  border:1px solid #ccc;
+}
+
+aside {
+    width:200px;
+}
+
+main .center{
+    width:400px;
+}
+
+main .slide-wrapper{
+    flex:1;
+}
+
+footer{
+    height:100px;
+}
+
+footer >*{
+    border:1px solid #ccc;
+}
+
+/* aside */
+
+aside > * {
+    border:1px solid #ccc;
+}
+
+aside header{
+    height:100px;
+}
+
+aside nav{
+    height:400px;
+}
+
+/* center */
+.center > *{
+    border:1px solid #ccc;
+}
+
+#notice{
+    height:250px;
+}
+
+#gallery{
+    height:250px;
+}
+.banner{
+    height:250px;
+}
+
+/* footer */
+
+footer{
+    height:100px;
+    display:flex;
+}
+
+footer >*{
+    border:1px solid #ccc;
+}
+
+footer .footer-logo {
+    width:200px;
+}
+
+footer .copyright{
+    flex:1;
+}
+
+.family-site{
+    width:230px;
+}

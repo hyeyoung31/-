@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "맑은 고딕";
+    font-size:14px;
+    color:#ccc;
+    box-sizing: border-box;
+}
+
+a{
+    color:inherit;
+}
+
+.hidden{
+    display: none;
+}
+
+/* layout */
+body{
+    height:100vh;
+}
+
+main {
+    display:flex;
+    height:calc(100% - 120px);
+}
+
+main > * {
+    border:1px solid #ccc;
+}
+
+aside{
+    width:200px;
+}
+
+main .center{
+    width:400px;
+}
+
+main .slide-wrapepr{
+    flex:1;
+}
+
+/* aside */
+
+aside > *{
+    border:1px solid #ccc;
+}
+
+aside header{
+    height:100px;
+}
+
+aside nav{
+    height:400px;
+}
+
+/* center */
+
+.center > *{
+    border:1px solid #ccc;
+}
+
+.shortcut{
+    height:150px;
+}
+
+#notice{
+    height:250px;
+}
+
+#gallery{
+    height:250px;
+}
+
+.banner{
+    height:100px;
+}
+
+/* footer */
+
+footer{
+    display:flex;
+    height:120px;
+}
+
+footer >*{
+    border:1px solid #ccc;
+}
+
+.footer-logo{
+    width: 200px;
+}
+
+.footer-content{
+    flex:1;
+}
+
+.family-site{
+    width:230px;
+}
