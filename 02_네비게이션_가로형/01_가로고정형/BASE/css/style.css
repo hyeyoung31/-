@@ -46,7 +46,8 @@ header nav{
 	width: 720px;
 	margin-top:30px;
 	margin-right:10px;
-	float: right;
+	float: right; 
+        /* 슬라이드 보다 위로 올라오도록 */
 	position:relative;
 	z-index:1;
 }
@@ -78,8 +79,10 @@ nav ul ul li a:hover{
 }
 
 nav ul ul{
+/*서브 메뉴가 나타나도 메인 메뉴의 스타일이 깨지지 않도록 주메뉴를 기준으로 서브 메뉴 절대값 배치*/
 	position: absolute;
-	left:0;
+        left:0;
+ /*기준 되는 윗 부모의 넓이 같이 전체 넓이 사용하도록 */
 	width:100%;
 	display:none;
 }
