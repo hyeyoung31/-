@@ -47,12 +47,17 @@ header nav{
 	float: right;
 }
 /* Navigation */
+/*서브메뉴의 높이가 그대로 반영되어 서브메뉴의 부모인 nav의 높이가 커지도록 작성
+ nav의 높이가 변경되어도 header의 레이아웃이 깨지지 않도록, nav에 absolute 사용.
+ 배경을 #fff로 채워 배경이 #fff 로 전체 나타나도록 한다*/
 header nav{
 	width: 720px;
 	position:absolute;
 	right:10px;
 	top:30px;
 	background:#fff;
+/*이후 슬라이드 ㄷ보다 위쪽으로 올라오도록록 */
+	position: relative;
 	z-index: 1;	
 }
 nav > ul > li{
@@ -60,7 +65,6 @@ nav > ul > li{
 	float: left;
 	width: 180px;	
 	text-align: center;
-	position: relative;
 }
 nav > ul > li a{
 	color: #fff;
@@ -76,11 +80,12 @@ nav ul ul li a{
 nav > ul > li a:hover{
 	background: #3498db;	
 }
+
+/*서브 메뉴의 크기가 그대로 잡히도록, absolute를 잡지않음  */
 nav ul ul {
 	width: 100%;
 	display: none;
 }
-
 
 /* Main Contents */
 main section{
