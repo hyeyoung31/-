@@ -39,22 +39,27 @@ footer{
 /* header */
 
 header {
+/*header에 기준을 설정, header안의 콘텐츠가 서브메뉴 배경보다 앞으로 나올 수 있도록 z-index/
 	position:relative;
 	z-index:1;
 }
 
 header:after{
 	content:'';
+/*header 기준으로 절대값으로 header 바로 하단 배치 */
 	position:absolute;
 	left:0;
 	right:0;
 	height:0;
 	top:100%;
 	background: #ebebeb;
+/* 마우스 올라올 때 높이 변경되도록 */
 	transition:height 0.4s ease-in-out;
+/* header 내용보다 아래에 배치되도록 */
 	z-index:-1;
 }
 
+/* header에 active 추가되었을 때 :after요소의 높이가 160px로 변 */
 header.active:after{
 	height:160px;
 }
@@ -94,6 +99,7 @@ nav > ul > li > a{
 	background:#333;
 }
 
+/* 배경 안줌 */
 nav ul ul li a {
 	display:block;
 	color:#333;
