@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+/*slidewrapper 높이는 슬라이드 하나의 높이인 300px로 한정한 후, 넘치는 요소 보이지 않게overflow:hidden
+  .container(ul) 의 margin-top 값을 -300px -600px 같이 설정해 슬라이드 .container 전체를 위로 올림*/
 *{
 	margin:0; 
 	padding:0; 
