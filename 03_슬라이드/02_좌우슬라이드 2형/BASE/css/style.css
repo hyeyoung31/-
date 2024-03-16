@@ -82,6 +82,7 @@ footer .sns{
 }
 /* Slides */
 .slidewrapper{	
+/*왼쪽으로 가는 슬라이드 보이지 않게 하기 위함 */
 	overflow: hidden;	
 }
 .container{
@@ -89,8 +90,9 @@ footer .sns{
 	position: relative;
 }
 .slide{
+ /*슬라이드 겹치기 위해 절대값 배치  */
 	position: absolute;
 	width: 1200px;
 	height:300px;	
-	overflow: hidden;
-}
+	left:0;
+	top:0;
