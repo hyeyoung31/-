@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+/*레이어 팝업 만들기
+ 1 popup전체를 감까는 #popup을 left,right, top,bottom 값을 0으로 설정해 전체 화면을 차지하도록 만들고 display:none
+ 2 .popup_content 가운데 배치
+ 3. 닫기 버튼은 .popup_content 기준으로 절대값 배치
+ 4. #popup에 active 클래스명 추가 되면 화면에 나타나게 함*/
+
 *{
 	margin:0; 
 	padding:0; 
