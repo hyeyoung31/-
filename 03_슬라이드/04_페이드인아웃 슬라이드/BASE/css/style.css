@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+/* a모든 슬라이드에 대해 슬라이드 부모(.container)를 기준으로 절대값으로 배치하여 겹쳐있도록 함.
+    3초마다 현재 슬라이드는 fadeOut되고 동시에 다음 슬라이드는 fadeIn이 되도록 구현한다 */
 *{
 	margin:0; 
 	padding:0; 
