@@ -1,0 +1,297 @@
+@charset "utf-8";
+
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    list-style: none;
+    font-family: "맑은 고딕";
+    font-size:14px;
+    color:#333;
+    box-sizing: border-box;
+}
+
+a {color:inherit;}
+
+.hidden{
+    display:none;
+}
+
+img{
+    vertical-align: top;
+}
+
+/* layout */
+
+/* 100vh 추가하여 브라우저가 기본적으로 화면 전체를 사용하도록*/
+body{
+    width:100%;
+    height:100vh;
+}
+main {
+    display: flex;
+    height: calc(100% - 120px);
+}
+
+main>*{
+    border:1px solid #ccc;
+}
+aside {
+    width: 200px;
+}
+
+.center-content{
+    width:400px;
+}
+
+
+/* aside */
+
+aside  header{
+    height:100px;
+}
+
+aside nav{
+    background:#fff;
+    margin: 20px 10px 20px;
+    border:1px solid #ccc;
+}
+
+aside nav li{
+    line-height:40px;
+}
+
+
+.sub-menu{
+    background:#ccc;
+    display:none;
+}
+
+aside nav>ul>li+li{
+    border-top:1px solid #ccc;
+}
+
+aside nav a{
+    display:block;
+    padding: 0 5px;
+    transition:0.3s;
+}
+
+aside nav>ul>li:hover>a{
+    background:#333;
+    color:#fff;
+}
+aside nav li:hover a{
+    background:#666;
+    color:#fff;
+}
+
+aside .spot-menu{
+    display:flex;
+    justify-content: center;
+}
+aside .spot-menu li{
+    padding: 0 10px;
+}
+aside .spot-menu li:first-child{
+    border-right:1px solid #ccc;
+}
+
+aside .spot-menu li a:hover{
+    text-decoration: underline;
+}
+ 
+.center-content{
+   padding:10px;
+}
+
+.center-content>*{
+    margin:20px 0;
+}
+
+.shortcut{
+    display:flex;
+    align-items: center;
+    gap:10px;
+}
+
+.shortcut>img{
+    width:100px;
+}
+
+
+/* news gallery */
+
+
+.news-gallery h2{
+    display:inline-block;
+    background: #666;
+    color:#fff;
+    padding: 5px 10px;
+    border-radius: 5px 5px 0 0;
+    margin-bottom:-1pxl
+}
+
+.news-gallery ul{
+    border:1px solid #666;
+}
+
+#notice {margin-bottom:20px;}
+#notice ul li{
+    line-height:30px;
+    display:flex;
+    justify-content: space-between ;
+    padding: 0 5px;
+    border-bottom: 1px dashed #ebebeb;
+    transition:0.3s;
+}
+
+#notice ul li:last-child {border-bottom: none;}
+
+#notice ul li:hover{
+    background:#ebebeb;
+}
+
+#notice ul li:hover a{
+    font-weight: bold;
+}
+
+#gallery ul{
+    display:flex;
+    justify-content: space-between;
+    gap:10px;
+    padding:15px 20px;
+}
+
+#gallery ul li img{
+   width:100%;
+}
+
+#gallery ul li {
+    transition:0.3s;
+    text-align: center;
+}
+
+#gallery ul li:hover{
+    opacity: 0.5;
+}
+
+.banner ul {
+    display:flex;
+    justify-content: space-between;
+}
+.banner ul li{
+    text-align: center;
+}
+
+.banner ul img{
+    height:50px;
+}
+
+/* slides */
+
+.slide-wrapper {
+    flex:1;
+}
+
+
+.slide-image{
+    height:100%;
+    overflow:hidden;
+
+}
+.slide-image .container{
+    height:100%;
+    width:300%;
+    display:flex;
+    /* 없으면 js animate안먹음 주의!! */
+    position:relative;
+}
+
+.slide-image .container .slide{
+    width: calc(100%/3);
+    height:100%;
+}
+
+.slide-image img{
+    width: 100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* footer */
+
+footer{
+    height:120px;
+    display:flex;
+}
+
+
+.footer-logo{
+    width:200px;
+}
+
+
+.footer-contents{
+    padding-top:30px;
+    flex:1;
+    text-align: left;
+}
+
+.footer-menu ul{
+    display:flex;
+    margin-bottom:20px;
+}
+
+.footer-menu ul li{
+    padding: 0 15px;
+}
+
+.footer-menu ul li+li{
+    border-left:1px solid #ccc;
+}
+
+.footer-menu ul li a:hover{
+    text-decoration: underline;
+}
+
+.copyright{
+    padding:0 15px;
+}
+
+#popup{
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    display:none;
+    z-index:10;
+    background:(0,0,0,0.3);
+}
+
+.popup-content{
+    width:400px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:#fff;
+    color:#333;
+    box-shadow: 0 0 3px rgba(0,0,0,0,0.5);
+    padding: 20px 20px 100px;
+}
+
+.popup-content .close{
+    background:#333;
+    color:#fff;
+    padding: 5px 8px;
+    position:absolute;
+    right:10px;
+    bottom:10px;
+    cursor:pointer;
+}
+
+#popup.active{
+    display:block;
+}
